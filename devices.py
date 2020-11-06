@@ -67,6 +67,8 @@ class OneDOF():
 					self.encoder = int.from_bytes(bytes(data[2:4]), 'little')
 
 	def set_speed(self, value):
+		value = value if value <= 1000 else 1000
+		value = value if value >= 0 else value
 		self.speed = (value | (self.enable << 15))
 		if not __debug__:
 			self._hw.write(self._construct())
