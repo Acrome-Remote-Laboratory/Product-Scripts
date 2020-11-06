@@ -49,6 +49,7 @@ class OneDOF():
 		self.encoder = 0
 		self._id = 0xAB
 		self._header = 0x55
+		self.enable = False
 		if not __debug__:
 			self._hw = hw.HWSerial(115200, 0.1)
 		self._response_size = 8
@@ -66,7 +67,7 @@ class OneDOF():
 					self.encoder = int.from_bytes(bytes(data[2:4]), 'little')
 
 	def set_speed(self, value):
-		self.speed = value
+		self.speed = (value | (self.enable << 15))
 		if not __debug__:
 			self._hw.write(self._construct())
 		return
