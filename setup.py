@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
 	name="remotelab",
-	version="0.0.5",
+	version="0.0.6",
 	author="Umut Ediz",
 	author_email="umtedz@gmail.com",
 	description="Simplified interaction library for Acrome Remote Lab products",

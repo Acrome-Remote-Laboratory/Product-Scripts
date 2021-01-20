@@ -1,2 +1,22 @@
 
 remotelab/__pycache__/
+
+build/lib/remotelab/__init__.py
+
+build/lib/remotelab/devices.py
+
+build/lib/remotelab/hal_serial.py
+
+dist/remotelab-0.0.6-py3-none-any.whl
+
+dist/remotelab-0.0.6.tar.gz
+
+remotelab.egg-info/dependency_links.txt
+
+remotelab.egg-info/PKG-INFO
+
+remotelab.egg-info/requires.txt
+
+remotelab.egg-info/SOURCES.txt
+
+remotelab.egg-info/top_level.txt
